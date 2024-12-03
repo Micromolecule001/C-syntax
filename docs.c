@@ -3,13 +3,7 @@
 
 /*
     Basic Syntax
-    Structure of a C program
-    Writing and compiling your first C program
-    Understanding main(), printf(), and return 0
-    Data Types and Variables
-    
-
-    terminal commands: 
+    Terminal commands: 
 
     gcc file.c          compiling program
     ./file.exe          run compiled program 
@@ -19,7 +13,6 @@ int main () {
 
     //      Hello World!
     printf("Hello World! \n\n\n");
-
 
 
     // PRIMITIVE DATA TYPES 
@@ -71,16 +64,107 @@ int main () {
     double myDouble;
     char myChar;
     
-    printf("\n\nMemory SizeOf diffirent data types:\n\n");
+    printf("\n\nMemory SizeOf different data types:\n\n");
     printf("Int \t\t\t%lu\n", sizeof(myInt));
     printf("Float \t\t\t%lu\n", sizeof(myFloat));
     printf("Double \t\t\t%lu\n", sizeof(myDouble));
     printf("Char \t\t\t%lu\n", sizeof(myChar));
 
+    
+    // INPLICIT
+
+    printf("\n\nInplicit DataType:\n\n");
+    int num1 = 5;
+    int num2 = 2;
+    float sum = (float) num1 / num2;
+
+    printf("float sum = (float) num1 /num2 ==> %f", sum); // 2.500000
 
 
+    // OPERATORS
+
+    int a = 10, b = 3;
+    float x = 10.0, y = 3.0;
+
+    printf("\n\nC Operators Demonstration:\n\n");
+
+    // Arithmetic Operators
+    printf("Arithmetic Operators:\n");
+    printf("a + b = %d\n", a + b);  // Addition
+    printf("a - b = %d\n", a - b);  // Subtraction
+    printf("a * b = %d\n", a * b);  // Multiplication
+    printf("a / b = %d\n", a / b);  // Division (integer)
+    printf("x / y = %.2f\n", x / y); // Division (float)
+    printf("a %% b = %d\n", a % b);  // Modulus
+    printf("\n");
+
+    // Relational Operators
+    printf("Relational Operators:\n");
+    printf("a == b: %d\n", a == b);  // Equal to
+    printf("a != b: %d\n", a != b);  // Not equal to
+    printf("a > b: %d\n", a > b);    // Greater than
+    printf("a < b: %d\n", a < b);    // Less than
+    printf("a >= b: %d\n", a >= b);  // Greater than or equal to
+    printf("a <= b: %d\n", a <= b);  // Less than or equal to
+    printf("\n");
+
+    // Logical Operators
+    printf("Logical Operators:\n");
+    printf("(a > b) && (b > 0): %d\n", (a > b) && (b > 0)); // Logical AND
+    printf("(a > b) || (b < 0): %d\n", (a > b) || (b < 0)); // Logical OR
+    printf("!(a > b): %d\n", !(a > b));                     // Logical NOT
+    printf("\n");
+
+    // Bitwise Operators
+    printf("Bitwise Operators:\n");
+    printf("a & b = %d\n", a & b);  // Bitwise AND
+    printf("a | b = %d\n", a | b);  // Bitwise OR
+    printf("a ^ b = %d\n", a ^ b);  // Bitwise XOR
+    printf("~a = %d\n", ~a);        // Bitwise NOT
+    printf("a << 1 = %d\n", a << 1); // Left shift
+    printf("a >> 1 = %d\n", a >> 1); // Right shift
+    printf("\n");
+
+    // Assignment Operators
+    printf("Assignment Operators:\n");
+    int c = a;  // Assignment
+    printf("c = %d\n", c);
+    c += b;     // Add and assign
+    printf("c += b: %d\n", c);
+    c -= b;     // Subtract and assign
+    printf("c -= b: %d\n", c);
+    c *= b;     // Multiply and assign
+    printf("c *= b: %d\n", c);
+    c /= b;     // Divide and assign
+    printf("c /= b: %d\n", c);
+    c %= b;     // Modulus and assign
+    printf("c %%= b: %d\n", c);
+    printf("\n");
+
+    // Unary Operators
+    printf("Unary Operators:\n");
+    printf("a = %d, ++a = %d\n", a, ++a); // Pre-increment
+    printf("a = %d, a++ = %d\n", a, a++); // Post-increment
+    printf("a = %d, --a = %d\n", a, --a); // Pre-decrement
+    printf("a = %d, a-- = %d\n", a, a--); // Post-decrement
+    printf("\n");
+
+
+    // IF ELSE CONDITION
+
+    int time = 20;
+    if (time < 18) {
+      printf("Good day.");
+    } else if (time > 18) {
+      printf("Good evening.\n");
+    } else {
+        printf("Time == 18");
+    }
+    
+    // SIMPLIFY IF STATEMENT
+
+    (time < 18) ? printf("Good day.\n") : printf("Good evening.\n");
 
     return 0;
 }
-
 
