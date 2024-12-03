@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 /*
     Basic Syntax
@@ -236,8 +237,14 @@ int main () {
 
     int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
 
-    printf("%d", matrix[0][2]);  // Outputs 2
+    printf("\n\n Matrix[0][2] ==> %d", matrix[0][2]);  // Outputs 2
 
+
+    // STRING + LENGHT
+    
+    char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    printf("\n\nAlphabet string size ==> %d", strlen(alphabet));
+    
 
 
 
