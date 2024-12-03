@@ -248,7 +248,7 @@ int main () {
 
     // USER INPUT
 
-    // Create an int and a char variable
+    /* Create an int and a char variable
     int myNum;
     char Char;
 
@@ -263,10 +263,24 @@ int main () {
 
     // Print the character
     printf("Your character is: %c\n", Char);
+    */
 
+    // MEMORY 
 
+    int Age = 43;
+    printf("\n\n\n%p", &Age); 
 
+    
+    // POINTERS
 
+    int myAge = 43;     // Variable declaration
+    int* ptr = &myAge;  // Pointer declaration
+
+    // Reference: Output the memory address of myAge with the pointer (0x7ffe5367e044)
+    printf("\n\n\n%p\n", ptr);
+
+    // Dereference: Output the value of myAge with the pointer (43)
+    printf("%d\n", *ptr);
 
     return 0;
 }
