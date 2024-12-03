@@ -16,9 +16,13 @@
 */
 
 int main () {
+
+    //      Hello World!
     printf("Hello World! \n\n\n");
 
-    // Primitive data types (int, char, float, double)
+
+
+    // PRIMITIVE DATA TYPES 
 
     // Integer types
     int number = -42;               // Standard integer
@@ -58,6 +62,23 @@ int main () {
 
     // Boolean type
     printf("Boolean (true/false): %d\n", isTrue); // Prints 1 for true, 0 for false
+
+
+    // MEMORY SIZE
+
+    int myInt;
+    float myFloat;
+    double myDouble;
+    char myChar;
+    
+    printf("\n\nMemory SizeOf diffirent data types:\n\n");
+    printf("Int \t\t\t%lu\n", sizeof(myInt));
+    printf("Float \t\t\t%lu\n", sizeof(myFloat));
+    printf("Double \t\t\t%lu\n", sizeof(myDouble));
+    printf("Char \t\t\t%lu\n", sizeof(myChar));
+
+
+
 
     return 0;
 }
