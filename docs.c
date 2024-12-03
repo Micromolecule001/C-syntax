@@ -163,7 +163,41 @@ int main () {
     
     // SIMPLIFY IF STATEMENT
 
-    (time < 18) ? printf("Good day.\n") : printf("Good evening.\n");
+    (time < 18) ? printf("Good day.\n") : printf("Good evening.\n\n\n");
+    
+    
+    // SWITCH CASES
+
+    int day = 4;
+
+    switch (day) {
+      case 1:
+        printf("Monday");
+        break;
+      case 2:
+        printf("Tuesday");
+        break;
+      case 3:
+        printf("Wednesday");
+        break;
+      case 4:
+        printf("Thursday");
+        break;
+      case 5:
+        printf("Friday");
+        break;
+      case 6:
+        printf("Saturday");
+        break;
+      case 7:
+        printf("Sunday");
+        break;
+      default:
+        printf("error, no such day index")
+    }
+    
+    
+    // WHILE LOOP
 
     return 0;
 }
