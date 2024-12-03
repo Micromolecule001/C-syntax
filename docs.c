@@ -206,6 +206,16 @@ int main () {
       i++;
     }
 
+    int e = 0;
+    
+    // DO\WHILE
+
+    do {
+      printf("%d\n", e);
+      e++;
+    }
+    while (e < 5);
+
     return 0;
 }
 
