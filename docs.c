@@ -215,7 +215,21 @@ int main () {
       e++;
     }
     while (e < 5);
+    
+    
+    // FOR LOOP
 
+    int o, j;
+
+    // Outer loop
+    for (o = 1; o <= 2; ++o) {
+      printf("Outer: %d\n", i);  // Executes 2 times
+
+      // Inner loop
+      for (j = 1; j <= 3; ++j) {
+        printf(" Inner: %d\n", j);  // Executes 6 times (2 * 3)
+      }
+    }
     return 0;
 }
 
