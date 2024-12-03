@@ -246,8 +246,23 @@ int main () {
     printf("\n\nAlphabet string size ==> %d", strlen(alphabet));
     
 
+    // USER INPUT
 
+    // Create an int and a char variable
+    int myNum;
+    char Char;
 
+    // Ask the user to type a number AND a character
+    printf("\n\n\nType a number AND a character and press enter: \n");
+
+    // Get and save the number AND character the user types
+    scanf("%d %c", &myNum, &Char);
+
+    // Print the number
+    printf("Your number is: %d\n", myNum);
+
+    // Print the character
+    printf("Your character is: %c\n", Char);
 
 
 
