@@ -230,6 +230,22 @@ int main () {
         printf(" Inner: %d\n", j);  // Executes 6 times (2 * 3)
       }
     }
+
+
+    // MATRIX (MULTIDIMENTIONAL ARRAYS)
+
+    int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
+
+    printf("%d", matrix[0][2]);  // Outputs 2
+
+
+
+
+
+
+
+
+
     return 0;
 }
 
