@@ -10,14 +10,49 @@
     ./file.exe          run compiled program 
 */
 
+// If main at the top -- must declarate the functions (compiler work line-by-line)
+const char* helloWorld(bool option);
+void primitiveDataTypes();
+void memorySize();
+void implicit();
+void operators();
+void ifElse();
+void switchCases();
+void loops();
+void userInput();
+void pointers();
+void structures();
+void enums();
+
 int main () {
 
-    //      Hello World!
-    printf("Hello World! \n\n\n");
+    // Hello World!
+    printf("%s", helloWorld(true));
 
+    primitiveDataTypes();
+    memorySize();
+    implicit();
+    operators();
+    ifElse();
+    switchCases();
+    loops();
+    // userInput();
+    pointers();
+    structures();
+    enums();
 
-    // PRIMITIVE DATA TYPES 
+    return 0;
+}
 
+const char* helloWorld(bool option) {
+    if (option) {
+        return "Hello World!\n\n";
+    } else {
+        return "Goodbye world!\n\n";
+    };
+}
+
+void primitiveDataTypes() {
     // Integer types
     int number = -42;               // Standard integer
     short shortNumber = 32767;      // Short integer
@@ -56,10 +91,21 @@ int main () {
 
     // Boolean type
     printf("Boolean (true/false): %d\n", isTrue); // Prints 1 for true, 0 for false
+                                                  //
+    // Matrix (multidimentional arrays)
+
+    int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
+
+    printf("\n\n Matrix[0][2] ==> %d", matrix[0][2]);  // Outputs 2
 
 
-    // MEMORY SIZE
+    // String (+lenght)
+    
+    char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    printf("\n\nAlphabet string size ==> %d", strlen(alphabet));
+}
 
+void memorySize() {
     int myInt;
     float myFloat;
     double myDouble;
@@ -71,19 +117,20 @@ int main () {
     printf("Double \t\t\t%lu\n", sizeof(myDouble));
     printf("Char \t\t\t%lu\n", sizeof(myChar));
 
-    
-    // INPLICIT
+    int Age = 43;
+    printf("\n\n\n%p", &Age); 
+}
 
+void implicit() {
     printf("\n\nInplicit DataType:\n\n");
     int num1 = 5;
     int num2 = 2;
     float sum = (float) num1 / num2;
 
     printf("float sum = (float) num1 /num2 ==> %f", sum); // 2.500000
+}
 
-
-    // OPERATORS
-
+void operators() {
     int a = 10, b = 3;
     float x = 10.0, y = 3.0;
 
@@ -149,10 +196,9 @@ int main () {
     printf("a = %d, --a = %d\n", a, --a); // Pre-decrement
     printf("a = %d, a-- = %d\n", a, a--); // Post-decrement
     printf("\n");
+}
 
-
-    // IF ELSE CONDITION
-
+void ifElse() {
     int time = 20;
     if (time < 18) {
       printf("Good day.");
@@ -161,14 +207,12 @@ int main () {
     } else {
         printf("Time == 18");
     }
-    
-    // SIMPLIFY IF STATEMENT
 
+    // simplify "if"
     (time < 18) ? printf("Good day.\n") : printf("Good evening.\n\n\n");
-    
-    
-    // SWITCH CASES
+}
 
+void switchCases() {
     int day = 4;
 
     switch (day) {
@@ -196,59 +240,41 @@ int main () {
       default:
         printf("error, no such day index");
     };
-    
-    
-    // WHILE LOOP
+}
 
+void loops() {
     int i = 0;
+    int e = 0;
+    int o, j;
 
+    // while
     while (i <= 5) {
       printf("%d\n", i);
       i++;
     }
-
-    int e = 0;
     
-    // DO\WHILE
-
+    // do while
     do {
       printf("%d\n", e);
       e++;
     }
     while (e < 5);
     
-    
-    // FOR LOOP
 
-    int o, j;
-
-    // Outer loop
+    // for 
     for (o = 1; o <= 2; ++o) {
+      // Outer loop
       printf("Outer: %d\n", i);  // Executes 2 times
 
-      // Inner loop
       for (j = 1; j <= 3; ++j) {
+        // Inner loop
         printf(" Inner: %d\n", j);  // Executes 6 times (2 * 3)
       }
     }
+}
 
-
-    // MATRIX (MULTIDIMENTIONAL ARRAYS)
-
-    int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
-
-    printf("\n\n Matrix[0][2] ==> %d", matrix[0][2]);  // Outputs 2
-
-
-    // STRING + LENGHT
-    
-    char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    printf("\n\nAlphabet string size ==> %d", strlen(alphabet));
-    
-
-    // USER INPUT
-
-    /* Create an int and a char variable
+void userInput() {
+    // Create an int and a char variable
     int myNum;
     char Char;
 
@@ -263,16 +289,9 @@ int main () {
 
     // Print the character
     printf("Your character is: %c\n", Char);
-    */
+}
 
-    // MEMORY 
-
-    int Age = 43;
-    printf("\n\n\n%p", &Age); 
-
-    
-    // POINTERS
-
+void pointers() {
     int myAge = 43;     // Variable declaration
     int* ptr = &myAge;  // Pointer declaration
 
@@ -280,8 +299,43 @@ int main () {
     printf("\n\n\n%p\n", ptr);
 
     // Dereference: Output the value of myAge with the pointer (43)
-    printf("%d\n", *ptr);
-
-    return 0;
+    printf("%d\n\n", *ptr);
 }
 
+struct Car {
+  char brand[50];
+  char model[50];
+  int year;
+};
+
+void structures() {
+  struct Car car1 = {"BMW", "X5", 1999};
+  struct Car car2 = {"Ford", "Mustang", 1969};
+  struct Car car3 = {"Toyota", "Corolla", 2011};
+
+  printf("%s %s %d\n", car1.brand, car1.model, car1.year);
+  printf("%s %s %d\n", car2.brand, car2.model, car2.year);
+  printf("%s %s %d\n", car3.brand, car3.model, car3.year);
+}
+
+enum Level {
+  LOW = 1,
+  MEDIUM,
+  HIGH
+};
+
+void enums() {
+  enum Level myVar = MEDIUM;
+
+  switch (myVar) {
+    case 1:
+      printf("Low Level");
+      break;
+    case 2:
+      printf("Medium level");
+      break;
+    case 3:
+      printf("High level");
+      break;
+  }
+}
